@@ -1,0 +1,15 @@
+[Unit]
+Description=Monitor de palavras-chave do Telegram
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=SEU_USUARIO
+WorkingDirectory=/home/SEU_USUARIO/tg-alert/app
+ExecStart=/home/SEU_USUARIO/tg-alert/venv/bin/python main.py
+Restart=always
+RestartSec=15
+
+[Install]
+WantedBy=multi-user.target

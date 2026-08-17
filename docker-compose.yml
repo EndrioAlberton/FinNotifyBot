@@ -1,0 +1,10 @@
+services:
+  monitor:
+    build: .
+    container_name: tg-alert
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./data:/srv/data
+    stdin_open: true
+    tty: true

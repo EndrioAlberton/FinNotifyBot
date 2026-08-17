@@ -1,0 +1,30 @@
+# --- Segredos: credenciais MTProto, token do bot, owner id ---
+.env
+.env.local
+.env.*.local
+
+# --- Dados de runtime: sessao do Telegram (= login da conta) + banco local ---
+# "data/" pega tanto ./data quanto ./app/data, em qualquer profundidade
+data/
+*.session
+*.session-journal
+*.db
+*.sqlite3
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+env/
+*.egg-info/
+build/
+dist/
+
+# --- Editor / SO ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
